@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.bhavya.farmersfriend.ChatBot">
+
+    <ListView
+        android:id="@+id/messageListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:background="@null"
+        android:divider="@null"
+        android:padding="16dp"
+        android:transcriptMode="alwaysScroll" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginBottom="15dp"
+        android:weightSum="1"
+       >
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            app:cardCornerRadius="25dp"
+            android:outlineProvider="background"
+            app:cardElevation="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/chatText"
+            android:layout_width="match_parent"
+            android:minHeight="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/editrectangle"
+            />
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="50dp"
+            android:maxHeight="50dp"
+            android:visibility="visible"
+            android:src="@drawable/circlemic"/>
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:maxHeight="50dp"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:src="@drawable/circlesend" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
